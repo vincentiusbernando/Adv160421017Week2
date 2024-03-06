@@ -44,6 +44,7 @@ class MainFragment : Fragment() {
                 Toast.makeText(requireContext(), "Correct!", Toast.LENGTH_SHORT).show()
                 point++
                 UpdateQuestion()
+                binding.txtAnswer.setText("")
             }
             else{
                 val action = MainFragmentDirections.actionMainFragmentToResultFragment(point)
