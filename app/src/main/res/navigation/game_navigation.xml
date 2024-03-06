@@ -15,6 +15,9 @@
             app:destination="@id/gameFragment"
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_mainFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -29,5 +32,18 @@
         <argument
             android:name="player_name"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.ubayadev.adv160421017week2.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="point"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>
